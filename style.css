@@ -50,12 +50,11 @@ h3 {
     background-color: green;
 }
 
-button {
-    border-radius: 5px;
-    background-color: black;
-    color: #51e2f5;
-}
-
 .outer {
     color: black;
+}
+
+.btn {
+    margin-left: 47.5%;
+    margin-top: 30px;
 }

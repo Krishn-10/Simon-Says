@@ -9,6 +9,24 @@ let btns = ["blue", "red", "yellow", "pink"];
 let h3 = document.querySelector("h3");
 let body = document.querySelector("body");
 
+let button = document.querySelector("button");
+button.addEventListener("click", ()=>{
+    if(document.querySelector("body").style.backgroundColor == "black"){
+        button.classList.remove = "btn-dark";
+        button.classList.add = "btn-light";
+        body.style.backgroundColor="white";
+        body.style.color = "black";
+        button.innerText = "Dark";
+    }
+    else {
+        button.classList.remove = "btn-light";
+        button.classList.add = "btn-dark";
+        body.style.backgroundColor="black";
+        body.style.color = "white";
+        button.innerText = "Light";
+    }
+})
+
 document.addEventListener("keypress", function () {
     if (gameStart == false) {
         console.log("Game started");
@@ -91,17 +109,3 @@ function reset() {
     level = 0;
 };
 
-let button = document.querySelector("button");
-button.addEventListener("click", ()=>{
-    if(document.querySelector("body").style.backgroundColor == "black"){
-        body.style.backgroundColor="white";
-        body.style.color = "black";
-        button.style.backgroundColor = "black";
-    }
-    else {
-        body.style.backgroundColor="black";
-        body.style.color = "white";
-        button.style.backgroundColor = "grey";
-    }
-    
-})
